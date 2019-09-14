@@ -1,0 +1,84 @@
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{王新阳}
+
+\basicInfo{
+	\email{sunowsir@protonmail.com or sunowsir@gmail.com} \textperiodcentered\ 
+	\phone{(+86) 15145176618} \textperiodcentered\ 
+	\github[sunowsir]{https://github.com/sunowsir}
+}
+
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{佳木斯大学}, 佳木斯}{2016 -- 至今}
+\textit{在读本科生}\ 计算机科学与技术, 预计 2020 年 7 月毕业
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{分布式服务器运行状态监控系统}}{2018年10月 -- 2018年12月}
+\role{C, Linux}{个人项目}
+\begin{onehalfspacing}
+\begin{itemize}
+	\item 项目简介：
+	\\~
+	针对服务器各个运行状态数据加以监控的简单监控软件。
+	\item 运行状态监控数据采集:
+	\\~
+	通过 Linux 脚本获取服务器运行状态信息数据,并加以分析,分类存储。
+	\item 数据及时性保证:
+	\\~
+	通过避免使用文件互斥锁来尽可能的来保证数据采集的及时性。
+	\item 避免文件访问冲突方式:
+	\\~
+	通过使用短数据密集传输的方式来避免访问文件的文件指针冲突。
+	\item 数据分类发送与接收方式:
+	\\~
+	通过发送标识码模拟请求,从而达到准确接收不同类型数据的目的。
+	\item 数据传送可靠性保证:
+	\\~
+	数据传输采用 TCP 连接,以保证数据传输的可靠性。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{简单实现linux下ls命令}}{2018年7月 -- 9月}
+\role{C, Linux}{个人项目}
+\begin{onehalfspacing}
+\begin{itemize}
+	\item 项目简介：简单实现linux下ls命令，实现 -a、-l以及参数叠加功能。
+	\item 架构说明：通过调用linuxＣ的相关函数单纯模拟实现。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{文本快速查找}}{2019年1月 -- 2月}
+\role{Linux}{个人项目
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 项目简介：基于字典树的简单多模文本查找工具
+  \item 功能说明：
+\end{itemize}
+\end{onehalfspacing}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言: 熟悉C、Bash，较熟悉c++，了解Python，简单了解Golang、vala。
+  \item 基础数据结构：基本掌握顺序表、链表、栈、队列、简单排序与查找算法、字典树等简单字符串匹配算法、并查集、平衡树。
+\end{itemize}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 技术博客: https://blog.csdn.net/sunowsir
+  \item 第十四届黑龙江省大学生程序设计竞赛三等奖
+  \item 校 ACM 实验室负责人之一,负责低年级成员基础知识辅导。
+\end{itemize}

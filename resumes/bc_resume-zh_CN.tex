@@ -1,0 +1,93 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{NotoSansSC_external}
+% \usepackage{NotoSerifCJKsc_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{毕成}
+
+\basicInfo{
+	\email{bc970321@163.com} \textperiodcentered\ 
+	\phone{(+86) 15765304024} \textperiodcentered\ 
+	\github[bc970321]{https://github.com/bc970321}
+}
+
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{佳木斯大学}, 佳木斯}{2016 -- 至今}
+\textit{在读本科生}\ 计算机科学与技术, 预计 2020 年 7 月毕业
+
+\section{\faUsers\ 项目经历}
+
+
+\datedsubsection{\textbf{分布式服务器健康监控系统}}{2019年3月 -- 2019年5月}
+\role{C, Linux}{个人项目}
+\begin{onehalfspacing}
+	\begin{itemize}
+		\item 项目目标:
+		 Master+Client的结构，支持上万Client并发，Client端监控集群硬件信息，CPU，内存，磁盘等资源消耗，用户及进程等系统信息，并按照各个指标进行健康状态分级，将故障和可能的风险对Master报警，并将健康信息发送到Master。
+		\item 
+		Client端使用多进程提高并发度，通过TCP协议进行安全的数据传输，发送心跳信息和等待Master端的链接请求。考虑服务器故障因素，将进行自我检测服务器心跳。考虑磁盘占用量，将大文件进行压缩，使用UDP与服务器进行警告信息通讯。
+		\item 
+		Master端使用多线程处理各节点数据，监测在线用户、使用epoll主动心跳，维护链表信息，对掉线的Client端进行删除重连、发送数据请求信息并接收数据。使用IO多路复用，提升系统效率。设置警报端口，及时接受警报信息。
+		\item 
+		使用系统调用的方法获取各硬件信息，CPU，内存，磁盘等系统资源，系统负载等数据。
+		\item 
+		使用配置文件的方式对监控系统的各参数进行配置，增加系统的健壮性和可扩展性。
+	\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{支持多并发的map实现}}{2019年5月 -- 2019年6月}
+\role{C++, Linux}{个人项目}
+\begin{onehalfspacing}
+	\begin{itemize}
+		\item 项目简介：
+		\\~
+		使用模板封装BRTree实现的支持多并发的map。
+		\item 功能：
+		\\~
+		通过设计iterator对map实现算法和数据结构的分离，提升程序的实用性。实用模板类进行封装实现多类型的增、删、改、查等基本操作，以及map的合并、名次的查找、upper-bound和lower-bound。
+		\item 性能：
+		\\~
+		使用Allocator和调整内存的分配和布局对程序的时间效率进行优化，正确管理new和delete的内存分配和销毁，避免内存碎片的产生、优化内存的利用率。		
+	\end{itemize}
+\end{onehalfspacing}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+	\item 开发平台: 熟悉linux平台开发环境,拥有linux平台开发经验。
+	\item 编程语言: 熟悉C、C++，了解Python、Bash。
+	\item 数据结构: 基本掌握顺序表、链表、栈、队列、哈希表、堆、平衡二叉树等数据结构。
+	\item 基础算法: 熟悉简单查找算法、排序算法、搜索、字符串匹配算法等基础算法。
+\end{itemize}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 校科技创新先进个人，校优秀学生干部，三好学生，校 ACM 实验室负责人。
+  \item 参与筹办第十二届中俄高校数学与计算机竞赛。
+  \item 第九届蓝桥杯黑龙江省二等奖。
+  \item 第十四届ACM-CCPC黑龙江省三等奖
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}

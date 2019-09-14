@@ -1,0 +1,5 @@
+solution.c: In function 'swapPairs'
+Line 14: Char 11: error: 'first' undeclared (first use in this function); did you mean 'frinst'?
+     while(first != NULL && second != NULL) {
+           ^~~~~
+         frinst:q

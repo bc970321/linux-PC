@@ -1,0 +1,9 @@
+{
+    def a;
+    a = 10;
+    for (def a = 1; a <= 10; a = a + 1) {
+        print a;
+    }
+    print a;
+}
+

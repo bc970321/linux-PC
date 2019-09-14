@@ -1,0 +1,100 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{NotoSansSC_external}
+% \usepackage{NotoSerifCJKsc_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{毕成}
+
+\basicInfo{
+	\email{bc970321@g163.com} \textperiodcentered\ 
+	\phone{(+86) 15765304024} \textperiodcentered\ 
+	\github[bc970321]{https://github.com/bc970321}
+}
+
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{佳木斯大学}, 佳木斯}{2016 -- 至今}
+\textit{在读本科生}\ 计算机科学与技术, 预计 2020 年 7 月毕业
+
+\section{\faUsers\ 项目经历}
+
+
+\datedsubsection{\textbf{分布式服务器运行状态监控系统}}{2019年3月 -- 2019年5月}
+\role{C, Linux}{个人项目}
+\begin{onehalfspacing}
+	\begin{itemize}
+		\item 项目简介：
+		\\~
+		针对服务器各个运行状态数据加以监控的简单监控软件。
+		\item 运行状态监控数据采集:
+		\\~
+		通过 Linux 脚本获取服务器运行状态信息数据,并加以分析,分类存储。
+		\item 数据及时性保证:
+		\\~
+		通过避免使用文件互斥锁来尽可能的来保证数据采集的及时性。
+		\item 避免文件访问冲突方式:
+		\\~
+		通过使用短数据密集传输的方式来避免访问文件的文件指针冲突。
+		\item 数据分类发送与接收方式:
+		\\~
+		通过发送标识码模拟请求,从而达到准确接收不同类型数据的目的。
+		\item 数据传送可靠性保证:
+		\\~
+		数据传输采用 TCP 连接,以保证数据传输的可靠性。
+	\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{文本快速查找}}{2019年1月 -- 2019年2月}
+\role{Linux}{个人项目}
+\begin{onehalfspacing}
+	\begin{itemize}
+		\item 项目简介：
+		\\~
+		基于字典树的简单多模文本查找工具。
+		\item 字符编码：
+		\\~
+		可选择获取字符的二进制编码和哈弗曼编码。
+		\item 字典树的建立：
+		\\~
+		线索化、建立失败指针、每个节点的子树由26颗改为2颗。
+	\end{itemize}
+\end{onehalfspacing}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+	\item 开发平台: 熟悉linux平台开发环境,拥有linux平台开发经验。
+	\item 编程语言: 熟悉C，较熟悉c++、Python、Bash。
+	\item 数据结构: 基本掌握顺序表、链表、栈、队列、字典树、AVL树、红黑树等数据结构。
+	\item 基础算法: 熟悉简单查找算法（二分查找、三分查找）、排序算法（快速排序、插入排序等）、字符串匹配算法（AC自动机、ShiftAnd等）等基础算法。
+\end{itemize}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item GitHub:  https://github.com/bc970321
+  \item 校 ACM 实验室负责人。
+  \item 第十四届黑龙江省大学生程序设计竞赛三等奖
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}

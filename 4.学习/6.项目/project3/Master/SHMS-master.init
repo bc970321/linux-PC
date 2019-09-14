@@ -1,0 +1,15 @@
+#! /bin/bash
+
+case ${1} in
+    "start")
+        /opt/SHMS-master/Master;
+    ;;
+    "stop")
+        kill $(cat /etc/SHMS-master/master.pid);
+    ;;
+    "restart")
+        kill $(cat /etc/SHMS-master/master.pid);
+        sleep 1;
+        /opt/SHMS-master/Master;
+    ;;
+esac

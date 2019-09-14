@@ -1,0 +1,16 @@
+{
+    def a, b;
+    a = 3;
+    b = 6;
+    for (def a = 2; a < 100; a = a + 1) {
+        def x = 0;
+        for (def c = 2; c < a; c = c + 1) {
+            if (a % c == 0) {
+                x = 1;
+            }
+        }
+        if (x == 0) {
+            print a;
+        }
+    }
+}
