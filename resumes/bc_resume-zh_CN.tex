@@ -23,7 +23,28 @@
 
 \section{\faGraduationCap\ 教育背景}
 \datedsubsection{\textbf{佳木斯大学}, 佳木斯}{2016 -- 至今}
-\textit{在读本科生}\ 计算机科学与技术, 预计 2020 年 7 月毕业
+\textit{在读本科生}\ 计算机科学与技术, 预计 2020 年 7 月毕业。
+
+\section{\faUsers\ 实习经历}
+
+
+\datedsubsection{\textbf{北京数美时代科技有限公司}}{2019年11月 -- 2020年2月}
+\role{Golang研发实习生}{平台架构部}
+\begin{onehalfspacing}
+	\begin{itemize}
+		\item 负责对天网RE层的功能研发
+		\\~ 接入统计服务模块、新增手机号Md5转换、调整deviceId校验方式。
+		\item 负责新增天网事件的上线以及产品API文档的更新维护
+		\\~ 天网加事件以及相应事件的API接口文档的更新。
+		\item 参与整体框架的重构
+		\\~ 设计天网V4版本与接入历史记录的技术方案。
+		\item 实习收获
+		\\~ 了解并学习了高并发、快速响应的工程项目框架的设计，熟悉了后端开发相关的任务研发流程。
+
+		
+
+	\end{itemize}
+\end{onehalfspacing}
 
 \section{\faUsers\ 项目经历}
 
@@ -32,35 +53,36 @@
 \role{C, Linux}{个人项目}
 \begin{onehalfspacing}
 	\begin{itemize}
+		\item 项目简介：
+		\\~ 基于socket和tcp协议的分布式服务器健康监控系统，采用CS结构实现由服务器对大量客户端进行健康监控的功能；
 		\item 项目目标:
-		 Master+Client的结构，支持上万Client并发，Client端监控集群硬件信息，CPU，内存，磁盘等资源消耗，用户及进程等系统信息，并按照各个指标进行健康状态分级，将故障和可能的风险对Master报警，并将健康信息发送到Master。
-		\item 
-		Client端使用多进程提高并发度，通过TCP协议进行安全的数据传输，发送心跳信息和等待Master端的链接请求。考虑服务器故障因素，将进行自我检测服务器心跳。考虑磁盘占用量，将大文件进行压缩，使用UDP与服务器进行警告信息通讯。
-		\item 
-		Master端使用多线程处理各节点数据，监测在线用户、使用epoll主动心跳，维护链表信息，对掉线的Client端进行删除重连、发送数据请求信息并接收数据。使用IO多路复用，提升系统效率。设置警报端口，及时接受警报信息。
-		\item 
-		使用系统调用的方法获取各硬件信息，CPU，内存，磁盘等系统资源，系统负载等数据。
-		\item 
-		使用配置文件的方式对监控系统的各参数进行配置，增加系统的健壮性和可扩展性。
+		\\~ Server+Client的结构，支持上万Client并发，Client端监控集群硬件信息，CPU，内存，磁盘等资源消耗，用户及进程等系统信息，并按照各个指标进行健康状态分级，将故障和可能的风险对Server报警，并将健康信息发送到Server。
+		\item Client端功能介绍： 
+		\\~ Client端使用多进程提高并发度，通过TCP协议进行安全的数据传输，发送心跳信息和等待Server端的链接请求。考虑服务器故障因素，将进行自我检测服务器心跳。考虑磁盘占用量，将大文件进行压缩，使用UDP与服务器进行警告信息通讯。
+		\item Server端功能介绍
+		\\~ Server端使用多线程处理各节点数据，监测在线用户、使用epoll主动心跳，维护链表信息，对掉线的Client端进行删除重连、发送数据请求信息并接收数据。使用IO多路复用，提升系统效率。设置警报端口，及时接受警报信息。
+		\item 健康信息的获取：
+		\\~ 使用系统调用的方法获取各硬件信息，CPU，内存，磁盘等系统资源，系统负载等数据。
+		\item 项目后续的升级和优化：
+		\\~ 使用配置文件的方式对监控系统的各参数进行配置，增加系统的健壮性和适用性。
+		\\~ 使用例如Zookeeper等分布式协调服务增加分布式的健壮性和适用性。
 	\end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{支持多并发的map实现}}{2019年5月 -- 2019年6月}
-\role{C++, Linux}{个人项目}
+\datedsubsection{\textbf{基于SMTP协议实现智能邮件}}{2019年４月 -- 2019年５月}
+\role{Python, Linux}{个人项目}
 \begin{onehalfspacing}
 	\begin{itemize}
 		\item 项目简介：
-		\\~
-		使用模板封装BRTree实现的支持多并发的map。
-		\item 功能：
-		\\~
-		通过设计iterator对map实现算法和数据结构的分离，提升程序的实用性。实用模板类进行封装实现多类型的增、删、改、查等基本操作，以及map的合并、名次的查找、upper-bound和lower-bound。
-		\item 性能：
-		\\~
-		使用Allocator和调整内存的分配和布局对程序的时间效率进行优化，正确管理new和delete的内存分配和销毁，避免内存碎片的产生、优化内存的利用率。		
+		\\~基于 SMTP（Simple Mail Transfer Protocal）简单邮件传输协议，实现的智能邮件，功能包括批量发送，自动回复，自动接收，自动保存附件等。
+		\item 功能设计：
+		\\~通过smtplib模块实现连接服务器、登录邮箱、发送邮件。通过email模块进行构造邮件(发件人、收件人、主题、正文)等系列操作。设计配置文件，增强程序的实用性。
+		\item 使用表现：
+		\\~发送邮件时通过读取配置信息自动登录邮箱并发送邮件，且数据稳定、可靠，接受邮件时自动将邮件的主题、内容、附件保存到本地，并将邮箱中的邮件设置为已读状态。
+		\item 不足与拓展:
+		\\~批量发送邮件功能需依赖脚本，计划增加智能回复功能，通过接受邮件时解析主题进行判断，把需要回复的邮件地址自动保存在发送功能的配置信息中。		
 	\end{itemize}
 \end{onehalfspacing}
-
 % Reference Test
 %\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
 %An xxx optimized for xxx\cite{verma2015large}
@@ -73,17 +95,27 @@
 \begin{itemize}[parsep=0.5ex]
 	\item 开发平台: 熟悉linux平台开发环境,拥有linux平台开发经验。
 	\item 编程语言: 熟悉C、C++，了解Python、Bash。
-	\item 数据结构: 基本掌握顺序表、链表、栈、队列、哈希表、堆、平衡二叉树等数据结构。
-	\item 基础算法: 熟悉简单查找算法、排序算法、搜索、字符串匹配算法等基础算法。
+	\item 数据结构: 基本掌握顺序表、链表、栈、队列、哈希表、堆、平衡二叉树(AVL-Tree,SBTree,RBTree)等数据结构。
+	\item 算法: 掌握查找（二分、三分、哈希表）、排序（快排、归并、堆排序、桶排序）、搜索（DFS、BFS）、简单动态规划、字符串匹配算法（KMP、Sunday、
+Shift-And、字典树及 AC 自动机）等基础算法。
 \end{itemize}
+
+
+\medskip
+\section{\faHeartO\ 获奖情况}
+\datedline{一等奖,佳木斯大学程序设计竞赛一等奖}{2017年6月}
+\datedline{二等奖,第十届黑龙江省蓝桥杯软件组二等奖}{2018年4月}
+\datedline{三等奖,第十四届黑龙江省程序大学生程序设计竞赛}{2019年5月}
+\medskip
 
 \section{\faInfo\ 其他}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 校科技创新先进个人，校优秀学生干部，三好学生，校 ACM 实验室负责人。
+  \item 
+  \href{http://bc970321.com}{个人博客:bc970321.com} 
+  \item 校科技创新先进个人，单项奖学金、优秀学生干部，三好学生。
   \item 参与筹办第十二届中俄高校数学与计算机竞赛。
-  \item 第九届蓝桥杯黑龙江省二等奖。
-  \item 第十四届ACM-CCPC黑龙江省三等奖
+  \item 班级班长，校ACM实验室负责人。
 \end{itemize}
 
 %% Reference
